@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ScrollView,
   View,
@@ -11,6 +11,13 @@ import {
 import Colors from "../constants/colors";
 
 const NewPlaceScreen = () => {
+  const [titleValue, setTitleValue] = useState("");
+
+  const titleChangeHandler = text => {
+    setTitleValue(text);
+  };
+
+  const savePlaceHandler = () => {};
   return (
     <ScrollView>
       <View style={styles.form}>
